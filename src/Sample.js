@@ -5,7 +5,10 @@ const GridItem = posed.View({
   RIGHT: {rotate: '45deg'},
   LEFT: {rotate: '-45deg'},
 });
-
+const POSITIONS = ['LEFT', 'RIGHT'];
+const getRandomPosition = (arr = POSITIONS) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
 
 const Sample = () => {
   const [parca, setParca] = useState('RIGHT');
