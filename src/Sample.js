@@ -9,6 +9,14 @@ const POSITIONS = ['LEFT', 'RIGHT'];
 const getRandomPosition = (arr = POSITIONS) => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
+
+const Grid = ({items}) =>
+items.map(({key, position}) => (
+  <GridItem pose={position} key={key} style={styles.gridItem}>
+    <View style={styles.gridItemDiagonal} />
+  </GridItem>
+));
+
 const constructGrid = () => {
   return [...Array(33).keys()].map((index) => ({
     key:index,
