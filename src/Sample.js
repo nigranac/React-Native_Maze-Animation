@@ -9,6 +9,12 @@ const POSITIONS = ['LEFT', 'RIGHT'];
 const getRandomPosition = (arr = POSITIONS) => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
+const constructGrid = () => {
+  return [...Array(33).keys()].map((index) => ({
+    key:index,
+    position: getRandomPosition(),
+  }));
+};
 
 const Sample = () => {
   const [parca, setParca] = useState('RIGHT');
