@@ -42,3 +42,27 @@ const Sample = () => {
 
 export default Sample;
 
+const styles = StyleSheet.create({
+  gridItem: {
+    backgroundColor: 'gold',
+    borderWidth: 2,
+    borderColor: '#333',
+    width: 100,
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius:20
+  },
+  gridItemDiagonal: {
+    width: 3,
+    height: Math.sqrt(2) * 100,
+    backgroundColor: 'purple',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: 'gold',
+    flexDirection:"row",
+    flexWrap:"wrap"
+  },
+});
+
